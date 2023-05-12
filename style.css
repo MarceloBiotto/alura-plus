@@ -1,0 +1,47 @@
+:root {
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+    --fonte-principal: 'Inter';
+}
+
+body{
+    background-color: var(--cor-de-fundo) ;
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.principal{
+    background-image: url("img/Background.png");
+    background-repeat: no-repeat; /* não permite que a imagem fique se repetindo para ocupar todo espaço disponivel */
+    background-size: contain;
+
+}
+
+.container{
+    height: 100vh;  /* detecta a altura total da página para imagem ocupar */
+    display: grid;
+    grid-template-columns: 50%; /*esse comando divide a tela, no caso aqui ele dividi pela metade,mas podemos dividir conforme quisermos aumentando o % */
+}
+
+.container__botao{
+    background-color: var(--botao-azul);
+    border-radius: 5px; /*arredondamento da borda*/
+    padding: 1em; /*aumenta o preenchimento do background-color ,dando "cara" de botão */
+    color: var(--branco-principal);
+    display: block; /* aqui aplicamos aonde o botão irá estar/ocupar na página */
+}
+
+.botao_secundario{
+    background-color: transparent;
+    border: 2px solid var(--branco-principal); /* 2px o tamanho da borda. solid é como é essa borda, poderia ser tracejado etc, e por ultimo a cor dessa borda */
+
+}
