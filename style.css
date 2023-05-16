@@ -23,13 +23,24 @@ body{
     background-image: url("img/Background.png");
     background-repeat: no-repeat; /* não permite que a imagem fique se repetindo para ocupar todo espaço disponivel */
     background-size: contain;
+    align-items: center;
+    text-align: center; /* alinha não somente os textos,mas todos os conteudos dentro de uma section */
 
 }
 
 .container{
     height: 100vh;  /* detecta a altura total da página para imagem ocupar */
     display: grid;
-    grid-template-columns: 50%; /*esse comando divide a tela, no caso aqui ele dividi pela metade,mas podemos dividir conforme quisermos aumentando o % */
+    grid-template-columns: 50% 50%; /*esse comando divide a tela, no caso aqui ele dividi pela metade,mas podemos dividir conforme quisermos aumentando o % */
+}
+
+.container__titulo{
+ font-size: 28px;   
+ font-weight: 700;
+}
+
+.container__caixa {
+    margin:0 6em;
 }
 
 .container__botao{
@@ -38,10 +49,90 @@ body{
     padding: 1em; /*aumenta o preenchimento do background-color ,dando "cara" de botão */
     color: var(--branco-principal);
     display: block; /* aqui aplicamos aonde o botão irá estar/ocupar na página */
+    text-decoration: none; /*retiramos a decoração que já vem as vezes automatico */
+    margin-bottom: 1em;
+
+
+
 }
 
 .botao_secundario{
     background-color: transparent;
     border: 2px solid var(--branco-principal); /* 2px o tamanho da borda. solid é como é essa borda, poderia ser tracejado etc, e por ultimo a cor dessa borda */
 
+}
+
+.container__aviso{
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}
+
+.container__imagem{
+    margin: 1em 0 2em 0;      /* como se fosse um relógio é a marcação das margens 1em em meio dia ou na margem de cima 0 é as 15hrs ou a margem da direita e assim por diante */
+}
+
+
+
+.secundario__imagem{
+    width: 80%;
+    
+}
+.secundario{
+    align-items: center;
+    margin: 0 10em;
+}
+
+
+
+.descricao__titulo{
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto{
+    color: var(--cinza-secundario);
+}
+
+.secundario__botao{
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.container__descricao{
+    padding: 2em;
+}
+
+.dispostivos__lista{
+    display: flex;
+   justify-content: center;
+   list-style-type: none;
+   margin: 5em 0;
+
+}
+.dispositivos{
+    text-align: center;
+}
+
+.dispositivos__titulo{
+    font-size: 48px;
+    color: var(--branco-principal);
+
+}
+.lista__item {
+    font-size: 32px;
+    color: var(--branco-principal);
+}
+.rodape__lista{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    list-style-type: none;
+  
+}
+.rodape__texto{
+    display: flex;
+    align-items: center;
+    text-align: center;
 }
